@@ -4,8 +4,8 @@ def load_documents():
     with open("data/documents.json", "r") as file:
         return json.load(file)
 
-def save_documents(documents):
-    with open("data/documents.json", "w") as file:
+def save_documents(documents, filename="data/documents.json"):
+    with open(filename, "w") as file:
         json.dump(documents, file)
 
 def add_document(documents):
