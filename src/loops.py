@@ -1,25 +1,25 @@
-# for i in range(5):
-#     print("NEXUS")
-# for i in range(1,21):
-#     if(i % 2 == 0):
-#         print(i)    
+for i in range(5):
+    print("NEXUS")
+for i in range(1,21):
+    if(i % 2 == 0):
+        print(i)    
 
-# documents = [
-#     "Operating Systems",
-#     "Computer Networks",
-#     "Database Management Systems",
-#     "Machine Learning",
-#     "Artificial Intelligence"
-# ]
-# for i in documents:
-#     print(i)
-# for num, doc in enumerate(documents,start = 1):
-#     print(f"Document {num}:{doc}")
+documents = [
+    "Operating Systems",
+    "Computer Networks",
+    "Database Management Systems",
+    "Machine Learning",
+    "Artificial Intelligence"
+]
+for i in documents:
+    print(i)
+for num, doc in enumerate(documents,start = 1):
+    print(f"Document {num}:{doc}")
 
 
 choice = ""
 while choice != "4":
-    print("NEXUS")
+    print("\nNEXUS")
     print("1. Search Documents")
     print("2. Add Document")
     print("3. Delete Document")
