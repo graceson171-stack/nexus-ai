@@ -1,18 +1,34 @@
+documents= []
 choice =""
-while choice!="4":
+while choice!="5":
     print("\nNEXUS")
     print("1. Search Documents")
     print("2. Add Document")   
     print("3. Delete Document")
-    print("4. Exit")
+    print("4. List Documents")
+    print("5. Exit")
     choice = input("Enter your choice: ")
     if choice == "1":
         print("Searching Documents...")
     elif choice == "2":
-        print("Adding Document...")
+        document =input("Enter the document name to add: ")
+        documents.append(document)
+        print(f"Document '{document}' added successfully.")
     elif choice == "3":
-        print("Deleting Document...")   
-    elif choice == "4":
+        document = input("Enter the document name to delete: ")
+        if document in documents:
+            documents.remove(document)
+            print(f"Document '{document}' deleted successfully.")
+        else:
+            print(f"Document '{document}' not found.")  
+    elif choice == "5":
         print("Exiting...")
+    elif choice == "4":
+        if len(documents) == 0:
+            print("No documents available.")
+        else:
+            print("\nDocuments:")
+            for num, doc in enumerate(documents, start=1):
+                print(f"{num}. {doc}")
     else:
         print("Invalid choice. Please try again.")
