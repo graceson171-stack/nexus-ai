@@ -1,4 +1,7 @@
+import json
 documents= []
+with open("data/documents.json", "r") as file:
+    documents = json.load(file)
 choice =""
 while choice!="5":
     print("\nNEXUS")
@@ -13,11 +16,15 @@ while choice!="5":
     elif choice == "2":
         document =input("Enter the document name to add: ")
         documents.append(document)
+        with open("data/documents.json", "w") as file:
+            json.dump(documents, file)
         print(f"Document '{document}' added successfully.")
     elif choice == "3":
         document = input("Enter the document name to delete: ")
         if document in documents:
             documents.remove(document)
+            with open("data/documents.json", "w") as file:
+                json.dump(documents, file)
             print(f"Document '{document}' deleted successfully.")
         else:
             print(f"Document '{document}' not found.")  
